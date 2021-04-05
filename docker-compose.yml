@@ -1,0 +1,49 @@
+version: '3.9'
+
+services:
+  frontend_nginx:
+    image: demo_frontend_nginx:latest
+    networks:
+      - demo_network
+
+#  admin_nginx:
+#    image: zaberu_admin_nginx:latest
+#    depends_on:
+#      - backend_node
+#      - frontend_nginx
+#    environment:
+#      - VUE_APP_API_URL
+#      - VUE_APP_FRONTEND_URL
+#    networks:
+#      - zaberu_network
+#
+#  backend_node:
+#    image: zaberu_backend_node:latest
+#    depends_on:
+#      - mysql
+#      - redis
+#    environment:
+#      - VUE_APP_API_URL
+#      - MYSQL_DATABASE
+#      - MYSQL_USER
+#      - MYSQL_PASSWORD
+#    networks:
+#      - zaberu_network
+#
+#  mysql:
+#    image: mysql:5.7
+#    environment:
+#      - MYSQL_DATABASE
+#      - MYSQL_USER
+#      - MYSQL_PASSWORD
+#      - MYSQL_ROOT_PASSWORD
+#    networks:
+#      - zaberu_network
+#
+#  redis:
+#    image: redis:latest
+#    networks:
+#      - zaberu_network
+
+networks:
+  demo_network:

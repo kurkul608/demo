@@ -1,0 +1,60 @@
+version: '3.9'
+
+services:
+  frontend_nginx:
+    image: demo_frontend_nginx:latest
+    build:
+      context: builds/node/demo/dev
+      dockerfile: Dockerfile
+    ports:
+      #      - 8888:80
+      - 3000:3000
+    volumes:
+      - ./front:/var/www/front:rw,cached
+
+#  admin_nginx:
+#    image: zaberu_admin_nginx:latest
+#    build:
+#      context: builds/node/admin/dev
+#      dockerfile: Dockerfile
+#    environment:
+#      - VUE_APP_API_URL
+#      - VUE_APP_FRONTEND_URL
+#    ports:
+#      #      - 8880:80
+#      - 8082:8082
+#    volumes:
+#      - ./admin:/var/www/admin:rw,cached
+#
+#  backend_node:
+#    image: zaberu_backend_node:latest
+#    build:
+#      context: builds/node/backend/dev
+#      dockerfile: Dockerfile
+#    environment:
+#      - MYSQL_DATABASE
+#      - MYSQL_USER
+#      - MYSQL_PASSWORD
+#    ports:
+#      - 8860:3000
+#      - 8080:8080
+#    volumes:
+#      - ./back:/var/www/backend:rw,cached
+#
+#  redis:
+#    image: redis:latest
+#    expose:
+#      - 6379
+#    volumes:
+#      - ./redis:/data:rw
+#
+#  mysql:
+#    image: mysql:5.7
+#    environment:
+#      - MYSQL_DATABASE
+#      - MYSQL_USER
+#      - MYSQL_PASSWORD
+#      - MYSQL_ROOT_PASSWORD
+#    ports:
+#      - 3360:3306
+#    command: [ '--character-set-server=utf8mb4', '--default-authentication-plugin=mysql_native_password' ]
