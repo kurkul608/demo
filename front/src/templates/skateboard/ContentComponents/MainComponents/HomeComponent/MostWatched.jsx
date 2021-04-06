@@ -7,7 +7,7 @@ class Content extends React.Component {
       <Link
         className="nonestyleTagA"
         to={{
-          pathname: "/Home/Trending",
+          pathname: "/skateBoard/Home/Trending",
           search: "",
           hash: "",
           state: {},
