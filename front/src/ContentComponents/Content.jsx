@@ -14,10 +14,10 @@ export const Content = ({ videosDesctopList, channelLists }) => {
                 <HeaderComponent />
                 <div className="main-container">
                     {/* все страницы проекта */}
-                    <BrowserRouter>
-                        <Route path='/home' render={() => <HomeComponent videosDesctopList={videosDesctopList} channelLists = {channelLists} />} />
+                    {/*<BrowserRouter>*/}
+                        <Route path='/home' render={() => <HomeComponent videosDesctopList={videosDesctopList} channelLists = {channelLists} />}  />
                         <Route path='/Trending' render={() => <Trending />} />
-                    </BrowserRouter>
+                    {/*</BrowserRouter>*/}
                 </div>
             </div>
         </>
