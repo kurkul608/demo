@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import HeaderComponent from "./HeaderComponent/HeaderComponent";
 import HomeComponent from "./MainComponents/HomeComponent/HomeComponent";
 import { PlayList } from "./PlayList/PlayList";
@@ -12,16 +12,16 @@ export const Content = ({ videosDesctopList, channelLists }) => {
         <HeaderComponent />
         <div className="main-container">
           <Switch>
-            <Route path="/home" exact>
+            <Route path="/skateBoard/home" exact>
               <HomeComponent
                 videosDesctopList={videosDesctopList}
                 channelLists={channelLists}
               />
             </Route>
-            <Route path="/home/trending">
+            <Route path="/skateBoard/home/trending">
               <Trending />
             </Route>
-            <Route path="/Playlist">
+            <Route path="/skateBoard/Playlist">
               <PlayList />
             </Route>
           </Switch>

@@ -23,7 +23,7 @@ export const NavBar = () => {
           <div className="side-menu">
             <NavLink
               className="sidebar-link discover"
-              to="/Home"
+              to="/skateBoard/Home"
               activeClassName="is-active"
             >
               <Home />
@@ -31,7 +31,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link"
-              to="/streaming"
+              to="/skateBoard/streaming"
               activeClassName="is-active"
             >
               <Streaming />
@@ -39,7 +39,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link discover"
-              to="/Playlist"
+              to="/skateBoard/Playlist"
               activeClassName="is-active"
             >
               <PlayList />
@@ -47,7 +47,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link"
-              to="/bookmark"
+              to="/skateBoard/bookmark"
               activeClassName="is-active"
             >
               <BookMark />
@@ -60,7 +60,7 @@ export const NavBar = () => {
           <div className="side-menu">
             <NavLink
               className="sidebar-link"
-              to="/livestram"
+              to="/skateBoard/livestream"
               activeClassName="is-active"
             >
               <LiveStream />
@@ -68,7 +68,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link"
-              to="/tutorial"
+              to="/skateBoard/tutorial"
               activeClassName="is-active"
             >
               <Tutorial />
@@ -76,7 +76,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link"
-              to="/competation"
+              to="/skateBoard/competation"
               activeClassName="is-active"
             >
               <Competation />
@@ -84,7 +84,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link"
-              to="/community"
+              to="/skateBoard/community"
               activeClassName="is-active"
             >
               <Community />
