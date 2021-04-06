@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./assets/templates/css/SkateBoard.scss";
 import Context from "./Context";
 
@@ -7,6 +8,7 @@ const NavBar = React.lazy(()=> import('./NavBar/NavBar').then(module=>({default:
 
 
 const Content = React.lazy(()=> import('./ContentComponents/Content').then(module=>({default:module.Content})))
+
 
 
 export const App = () => {
@@ -58,15 +60,44 @@ export const App = () => {
   
   ]);
 
+
+
+  const [channelLists, setchannel] = React.useState([
+    { 
+      id: 1,
+      blackImg: "https://assets.codepen.io/3364143/skate-removebg-preview.png",
+      userImg: "https://images.unsplash.com/photo-1560941001-d4b52ad00ecc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+      userName: "Andy William",
+      completed : true,
+      views: "23k" ,
+      ago: 1,
+      desc: "How to do Basic Jumping and how to landing safely",
+      timeMach : 4,
+  },
+  { 
+    id: 2,
+    blackImg: "https://c0.anyrgb.com/images/1020/945/venice-beach-2018-outdoors-sport-men-jumping-desert-sunset-extreme-sports-one-person-action.jpg",
+    userImg: "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fG1lbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    userName: "Tony Andrew",
+    completed : true,
+    views: "23k" ,
+    ago: 1,
+    desc: "Skateboard Tips You need to know",
+    timeMach : 4,
+},
+  ]);
+
+
   return (
     <Context.Provider value={{ lists }}>
       <div className="container">
         <React.Suspense fallback={<p>Loading...</p>}>
-          <NavBar />
+   
+        <NavBar />
         </React.Suspense>
 
         <React.Suspense fallback={<p>Loading...</p>}>
-          <Content videosDesctopList = {lists} />
+          <Content videosDesctopList = {lists} channelLists={channelLists} />
         </React.Suspense>
       </div>
     </Context.Provider>
