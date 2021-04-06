@@ -52,58 +52,6 @@ ul#plList {
 /* player */
 
 
-
-*:focus
-{
-    outline: none;
-}
-
-body
-{
-    font-family: Helvetica, Arial;
-    margin: 0;
-    background-color: #ffeff5;
-}
-
-#app-cover
-{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    width: 430px;
-    height: 100px;
-    margin: -4px auto;
-}
-
-#bg-artwork
-{
-    position: fixed;
-    top: -30px;
-    right: -30px;
-    bottom: -30px;
-    left: -30px;
-    background-image: url("https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
-    filter: blur(40px);
-    -webkit-filter: blur(40px);
-    z-index: 1;
-}
-
-#bg-layer
-{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    opacity: 0.51;
-    z-index: 2;
-}
-
 #player
 {
     position: relative;
@@ -113,15 +61,15 @@ body
 
 #player-track
 {
-    position: absolute;
-    top: 0;
-    right: 15px;
-    left: 15px;
-    padding: 13px 22px 10px 184px;
-    background-color: #fff7f7;
+    width: 95%;
+    margin: auto;
+    padding: 11px 22px 8px 184px;
+    background-color: #3634406b;
     border-radius: 15px 15px 0 0;
     transition: 0.3s ease top;
     z-index: 1;
+    /* transform: translate(0px, 91px); */
+    transition: 0.5s;
 }
 
 #player-track.active
@@ -171,7 +119,7 @@ body
 
 #track-time.active #current-time, #track-time.active #track-length
 {
-    color: #f86d92;
+    color: #ff7551;
     background-color: transparent;
 }
 
@@ -232,10 +180,10 @@ body
 {
     position: relative;
     height: 100%;
-    background-color: #fff;
-    box-shadow: 0 30px 80px #656565;
+    background-color: #363440;
     border-radius: 15px;
     z-index: 2;
+    margin-top: 3px;
 }
 
 #album-art
@@ -247,7 +195,7 @@ body
     margin-left: 40px;
     transform: rotateZ(0);
     transition: 0.3s ease all;
-    box-shadow: 0 0 0 10px #fff;
+    box-shadow: 0 0 0 10px #363440;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -292,10 +240,11 @@ body
     z-index: 1;
 }
 
-#album-art.active img.active
+#album-art img.active
 {
     z-index: 1;
-    animation: rotateAlbumArt 3s linear 0s infinite forwards;
+    -webkit-animation: rotateAlbumArt 3s linear 0s infinite forwards;
+            animation: rotateAlbumArt 3s linear 0s infinite forwards;
 }
 
 @keyframes rotateAlbumArt
@@ -348,11 +297,10 @@ body
 
 #player-controls
 {
-    width: 250px;
-    height: 100%;
-    margin: 0 5px 0 141px;
-    float: right;
+    width: 100%;
     overflow: hidden;
+    padding-left: 15%;
+    height: 88px;
 }
 
 .control
@@ -362,7 +310,7 @@ body
     padding: 12px 0;
 }
 
-.button
+/* .button
 {
     width: 26px;
     height: 26px;
@@ -394,7 +342,7 @@ body
 .button:hover i
 {
     color: #fff;
-}
+} */
 
 #ytd-url {
   display: block;
@@ -413,3 +361,28 @@ body
 }
 
 
+.seek-bar{
+    width: 3.90241% !important;
+}
+
+
+
+div#player-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div#player-controls button {
+    background: #ffffff00;
+    border: none;
+    transform: scale(1.2);
+    height: 72px;
+    width: 80px;
+}
+div#player-controls button:hover {
+    background: #3f3871;
+    transition: 0.3s;
+    cursor: pointer;
+}
