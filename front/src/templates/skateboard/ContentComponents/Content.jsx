@@ -4,8 +4,11 @@ import HeaderComponent from "./HeaderComponent/HeaderComponent";
 import HomeComponent from "./MainComponents/HomeComponent/HomeComponent";
 import { PlayList } from "./PlayList/PlayList";
 import { Trending } from "./Trending/Trending";
+import { Bookmark } from "./Bookmark/Bookmark";
 
-export const Content = ({ videosDesctopList, channelLists }) => {
+
+
+export const Content = ({ bookmark, videosDesctopList, channelLists }) => {
   return (
     <>
       <div className="wrapper">
@@ -24,6 +27,11 @@ export const Content = ({ videosDesctopList, channelLists }) => {
             <Route path="/skateBoard/Playlist">
               <PlayList />
             </Route>
+
+            <Route path="/skateBoard/bookmark">
+              <Bookmark bookmark={bookmark} />
+            </Route>
+            
           </Switch>
 
           {/*</BrowserRouter>*/}
