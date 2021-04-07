@@ -195,8 +195,9 @@ export const PlayList = () => {
     return (
 
         <div id="MusicList">
+            <div className="main-header anim">Playlist</div>
 
-        <div id="player-track" className="">
+        <div id="player-track" className="anim">
                     <div id="album-name">Dawn</div>
                     <div id="track-name">Skylike - Dawn</div>
                     <div id="track-time" className="active">

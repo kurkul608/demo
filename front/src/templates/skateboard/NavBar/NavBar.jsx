@@ -10,6 +10,7 @@ import { ReactComponent as Competation } from "../../../assets/templates/skateBo
 import { ReactComponent as Community } from "../../../assets/templates/skateBoard/icons/navbar/community.svg";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
+
 export const NavBar = () => {
   return (
     <>
@@ -23,15 +24,20 @@ export const NavBar = () => {
           <div className="side-menu">
             <NavLink
               className="sidebar-link discover"
-              to="/Home"
+              to="/skateBoard/Home"
               activeClassName="is-active"
             >
               <Home />
               Discover
             </NavLink>
+
+
+
+
+
             <NavLink
               className="sidebar-link"
-              to="/streaming"
+              to="/skateBoard/streaming"
               activeClassName="is-active"
             >
               <Streaming />
@@ -39,7 +45,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link discover"
-              to="/Playlist"
+              to="/skateBoard/Playlist"
               activeClassName="is-active"
             >
               <PlayList />
@@ -47,7 +53,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link"
-              to="/bookmark"
+              to="/skateBoard/bookmark"
               activeClassName="is-active"
             >
               <BookMark />
@@ -60,7 +66,7 @@ export const NavBar = () => {
           <div className="side-menu">
             <NavLink
               className="sidebar-link"
-              to="/livestram"
+              to="/skateBoard/livestream"
               activeClassName="is-active"
             >
               <LiveStream />
@@ -68,7 +74,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link"
-              to="/tutorial"
+              to="/skateBoard/tutorial"
               activeClassName="is-active"
             >
               <Tutorial />
@@ -76,7 +82,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link"
-              to="/competation"
+              to="/skateBoard/competation"
               activeClassName="is-active"
             >
               <Competation />
@@ -84,7 +90,7 @@ export const NavBar = () => {
             </NavLink>
             <NavLink
               className="sidebar-link"
-              to="/community"
+              to="/skateBoard/community"
               activeClassName="is-active"
             >
               <Community />
