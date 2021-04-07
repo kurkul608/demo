@@ -10,6 +10,7 @@ import { ReactComponent as Competation } from "../../../assets/templates/skateBo
 import { ReactComponent as Community } from "../../../assets/templates/skateBoard/icons/navbar/community.svg";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
+
 export const NavBar = () => {
   return (
     <>
@@ -29,6 +30,11 @@ export const NavBar = () => {
               <Home />
               Discover
             </NavLink>
+
+
+
+
+
             <NavLink
               className="sidebar-link"
               to="/skateBoard/streaming"
