@@ -3,17 +3,6 @@ import React from "react";
 import MostWatched from "./MostWatched";
 
 
-
-// id: 2,
-// blackImg: "https://c0.anyrgb.com/images/1020/945/venice-beach-2018-outdoors-sport-men-jumping-desert-sunset-extreme-sports-one-person-action.jpg",
-// userImg: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-// userName: "Andy William",
-// completed : true,
-// views: "23k" ,
-// ago: 1,
-// desc: "How to do Basic Jumping and how to landing safely",
-// timeMach : 4,
-
 export const HomeComponent = ({channelLists, videosDesctopList}) => {
   return (
     <>

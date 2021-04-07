@@ -1,7 +1,8 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
-class MostWatched extends React.Component {
+class BookmarkLists extends React.Component {
   render() {
     return (
       <Link
@@ -47,4 +48,4 @@ class MostWatched extends React.Component {
   }
 }
 
-export default MostWatched;
+export default BookmarkLists;
