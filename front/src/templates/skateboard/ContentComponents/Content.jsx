@@ -10,7 +10,7 @@ import { Tutorial } from "./Tutorial/Tutorial";
 import { LiveStream } from "./LiveStream/LiveStream";
 
 
-export const Content = ({ bookmark, videosDesctopList, channelLists }) => {
+export const Content = ({channelLists }) => {
   return (
     <>
       <div className="wrapper">
@@ -19,8 +19,6 @@ export const Content = ({ bookmark, videosDesctopList, channelLists }) => {
           <Switch>
             <Route path="/skateBoard/home" exact>
               <HomeComponent
-                videosDesctopList={videosDesctopList}
-                channelLists={channelLists}
               />
             </Route>
             <Route path="/skateBoard/home/trending">
@@ -31,7 +29,7 @@ export const Content = ({ bookmark, videosDesctopList, channelLists }) => {
             </Route>
 
             <Route path="/skateBoard/bookmark">
-              <Bookmark bookmark={bookmark} />
+              <Bookmark />
             </Route>
 
             <Route path="/skateBoard/Profile">

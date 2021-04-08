@@ -1,9 +1,12 @@
 
 import React from "react";
+import { useSelector } from "react-redux";
 import MostWatched from "./MostWatched";
 
 
-export const HomeComponent = ({channelLists, videosDesctopList}) => {
+ const HomeComponent = () => {
+  const channelLists = useSelector((state) => state.skate.channelLists);
+  const videosDesctopList = useSelector((state) => state.skate.lists);
   return (
     <>
             <div className="main-header anim">Discover</div>
