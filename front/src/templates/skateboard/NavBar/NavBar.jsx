@@ -22,6 +22,17 @@ export const NavBar = () => {
         <div className="side-wrapper">
           <div className="side-title">MENU</div>
           <div className="side-menu">
+         
+          <NavLink
+              className="sidebar-link discover"
+              to="/skateBoard/Profile"
+              activeClassName="is-active"
+            >
+              <PlayList />
+              Profile
+            </NavLink>
+
+
             <NavLink
               className="sidebar-link discover"
               to="/skateBoard/Home"
@@ -30,19 +41,14 @@ export const NavBar = () => {
               <Home />
               Discover
             </NavLink>
-
-
-
-
-
-            <NavLink
+            {/* <NavLink
               className="sidebar-link"
               to="/skateBoard/streaming"
               activeClassName="is-active"
             >
               <Streaming />
               Streaming
-            </NavLink>
+            </NavLink> */}
             <NavLink
               className="sidebar-link discover"
               to="/skateBoard/Playlist"
