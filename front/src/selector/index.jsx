@@ -6,7 +6,7 @@ import { Case } from "./case";
 
 import skate from "./casesImages/skateboard.png";
 
-const sites = [{ image: skate, path: "/skateBoard/Home" }];
+const sites = [{ image: skate, path: "/skateBoard" }];
 export const Selector = () => {
   return (
     <>

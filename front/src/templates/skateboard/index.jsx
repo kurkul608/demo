@@ -6,18 +6,6 @@ import Context from "../../Context";
 import { NavBar } from "./NavBar/NavBar";
 import { Content } from "./ContentComponents/Content";
 
-// const NavBar = lazy(() =>
-//   import("./NavBar/NavBar").then((module) => ({
-//     default: module.NavBar,
-//   }))
-// );
-
-// const Content = lazy(() =>
-//   import("./ContentComponents/Content").then((module) => ({
-//     default: module.Content,
-//   }))
-// );
-
 export const SkateBoard = () => {
   const [lists, setLists] = useState([
     {
@@ -235,7 +223,6 @@ export const SkateBoard = () => {
     },
   ]);
 
-
   return (
     <>
       <Context.Provider value={{ lists }}>
@@ -246,7 +233,11 @@ export const SkateBoard = () => {
             {/*</React.Suspense>*/}
 
             {/*<React.Suspense fallback={<p>Loading...</p>}>*/}
-            <Content bookmark={bookmarklists} videosDesctopList={lists} channelLists={channelLists} />
+            <Content
+              bookmark={bookmarklists}
+              videosDesctopList={lists}
+              channelLists={channelLists}
+            />
             {/*</React.Suspense>*/}
           </div>
         </div>

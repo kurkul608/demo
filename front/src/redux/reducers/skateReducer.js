@@ -1,4 +1,5 @@
-import { ADD_TRACK } from "../actions/tracksActions";
+import { ADD_TRACK } from "../actions/skateboard/tracksActions";
+import { SET_LOGIN } from "../actions/skateboard/loginActions";
 const initialState = {
   tracks: [
     {
@@ -350,7 +351,7 @@ const initialState = {
       timeMach: 8,
     },
   ],
-  lists:[
+  lists: [
     {
       id: 1,
       videosorce:
@@ -430,16 +431,30 @@ const initialState = {
       desc: "Skateboard Tips You need to know",
       timeMach: 4,
     },
-  ]
-
+  ],
+  userData: {
+    email: "",
+    fio: "",
+  },
 };
 export const skateReducer = (state = initialState, actions) => {
-  switch (actions.types) {
+  switch (actions.type) {
     case ADD_TRACK: {
       const oldState = state.tracks;
       const { value } = actions;
       oldState.push(value);
       return { ...state, tracks: oldState };
+      break;
+    }
+    case SET_LOGIN: {
+      const { value } = actions;
+      const data = {
+        email: value.email,
+        fio: value.fio,
+      };
+      // debugger;
+      return { ...state, userData: data };
+      break;
     }
     default:
       return state;
