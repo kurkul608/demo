@@ -583,7 +583,9 @@ video {
  cursor: pointer;
  transition: 0.4s;
 }
-
+.stream-area:last-child {
+    margin-bottom: 0 !important;
+}
 .stream-area {
     display: flex;
  @media screen and (max-width: 940px) {
