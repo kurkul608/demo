@@ -5,7 +5,9 @@ import HomeComponent from "./MainComponents/HomeComponent/HomeComponent";
 import { PlayList } from "./PlayList/PlayList";
 import { Trending } from "./Trending/Trending";
 import { Bookmark } from "./Bookmark/Bookmark";
-
+import { Profile } from "./Profile/Profile";
+import { Tutorial } from "./Tutorial/Tutorial";
+import { LiveStream } from "./LiveStream/LiveStream";
 
 
 export const Content = ({ bookmark, videosDesctopList, channelLists }) => {
@@ -31,7 +33,22 @@ export const Content = ({ bookmark, videosDesctopList, channelLists }) => {
             <Route path="/skateBoard/bookmark">
               <Bookmark bookmark={bookmark} />
             </Route>
+
+            <Route path="/skateBoard/Profile">
+              <Profile/>
+            </Route>
+
+
+            <Route path="/skateBoard/Tutorial">
+              <Tutorial/>
+            </Route>
+
+            <Route path="/skateBoard/livestream">
+              <LiveStream/>
+            </Route>
             
+
+
           </Switch>
 
           {/*</BrowserRouter>*/}
