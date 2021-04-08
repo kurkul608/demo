@@ -9,10 +9,6 @@ export const Listmusic = ({ data }) => {
                 <span className="plLength">{data.duration}</span>
             </div>
         </li>
-
-
-
-
     )
 }
 

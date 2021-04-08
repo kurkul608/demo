@@ -10,22 +10,22 @@ export const PlayList = () => {
   const tracks = useSelector((state) => state.skate.tracks);
   return (
     <div id="MusicList">
-      <div id="player-track" className="">
-        <div id="album-name">Dawn</div>
-        <div id="track-name">Skylike - Dawn</div>
-        <div id="track-time" className="active">
-          <div id="current-time">00:07</div>
-          <div id="track-length">03:09</div>
+      <div id="player_track" className="">
+        <div id="album_name">Dawn</div>
+        <div id="track_name">Skylike - Dawn</div>
+        <div id="track_time" className="active">
+          <div id="current_time">00:07</div>
+          <div id="track_length">03:09</div>
         </div>
-        <div id="s-area">
-          <div id="ins-time"></div>
-          <div id="s-hover"></div>
-          <div id="seek-bar"></div>
+        <div id="s_area">
+          <div id="ins_time"></div>
+          <div id="s_hover"></div>
+          <div id="seek_bar"></div>
         </div>
       </div>
 
-      <div className="anim" id="player-content">
-        <div id="album-art">
+      <div className="anim" id="player_content">
+        <div id="album_art">
           <img
             id="_1"
             src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg"
@@ -54,7 +54,7 @@ export const PlayList = () => {
           />
         </div>
 
-        <div id="player-controls">
+        <div id="player_controls">
           <button type="button" className="prev" aria-label="Previous">
             <svg width="28" height="16" viewBox="0 0 28 16" fill="none">
               <path

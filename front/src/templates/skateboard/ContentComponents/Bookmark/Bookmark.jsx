@@ -1,9 +1,11 @@
 
 import React from "react";
+import { useSelector } from "react-redux";
 import BookmarkLists from "./BookmarkLists";
 
 
-export const Bookmark = ({bookmark}) => {
+export const Bookmark = () => {
+  const bookmark = useSelector((state) => state.skate.bookmark);
   return (
     <>
             <div className="main-header anim">Bookmark</div>
