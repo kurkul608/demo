@@ -4,9 +4,10 @@ import { useSelector } from "react-redux";
 //other
 import { Listmusic } from "./Listmusic";
 import "./PlayList.css";
+import { skateReducer as skate } from "../../../../redux/reducers";
 
 export const PlayList = () => {
-  const tracks = useSelector((state) => state.tracksObject.tracks);
+  const tracks = useSelector((state) => state.skate.tracks);
   return (
     <div id="MusicList">
       <div id="player-track" className="">

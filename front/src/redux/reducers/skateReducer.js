@@ -219,7 +219,7 @@ const initialState = {
     },
   ],
 };
-export const tracksReducer = (state = initialState, actions) => {
+export const skateReducer = (state = initialState, actions) => {
   switch (actions.types) {
     case ADD_TRACK: {
       const oldState = state.tracks;

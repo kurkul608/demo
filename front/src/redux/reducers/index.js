@@ -1,1 +1,1 @@
-export { tracksReducer } from "./tracksReducer";
+export { skateReducer } from "./skateReducer";

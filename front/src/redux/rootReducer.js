@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { tracksReducer as tracksObject } from "./reducers";
+import { skateReducer as skate } from "./reducers";
 // import {
 //     loginReducer as loginData,
 //     findReducer as find,
@@ -9,5 +9,5 @@ import { tracksReducer as tracksObject } from "./reducers";
 // } from './reducers';
 
 export const rootreducer = combineReducers({
-  tracksObject,
+  skate,
 });
