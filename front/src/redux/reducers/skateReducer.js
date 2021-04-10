@@ -436,6 +436,63 @@ const initialState = {
     email: "",
     fio: "",
   },
+  profile: {
+    name: "Quan Ha",
+    avatar:
+      "https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg",
+    friends: [
+      {
+        id: 0,
+        image:
+          "https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0f",
+        name: "Chandelio",
+      },
+      {
+        id: 1,
+        image:
+          "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=d5849d81af587a09dbcf3f11f6fa122f",
+        name: "Janet Jolie",
+      },
+      {
+        id: 2,
+        image:
+          "https://images.unsplash.com/photo-1546539782-6fc531453083?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
+        name: "Patrick Watsons",
+      },
+    ],
+    introduction: {
+      designAt: "Bravebist",
+      liveIn: "Hanoi, Vietnam",
+    },
+    album: {
+      type: "album",
+      time: "6 hours ago",
+      text: "When the bass drops, so do my problems.",
+      images: [
+        {
+          id: 0,
+          src:
+            "https://images.unsplash.com/photo-1508179719682-dbc62681c355?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80",
+          main: true,
+        },
+        {
+          id: 1,
+          src:
+            "https://images.unsplash.com/photo-1502872364588-894d7d6ddfab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80",
+          main: false,
+        },
+        {
+          id: 2,
+          src:
+            "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+          main: false,
+        },
+      ],
+      likes: 87,
+      comments: 20,
+      reposts: 13,
+    },
+  },
 };
 export const skateReducer = (state = initialState, actions) => {
   switch (actions.type) {

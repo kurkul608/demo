@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 
 //other
 import "./Profile.scss";
 import { Timeline } from "./components";
+import { useSelector } from "react-redux";
 
 export const Profile = () => {
-  // const userData = useSelector((state) => state.skate.userData);
-  // const name = userData.fio.length ? userData.fio : userData.email;
-
   const [links, setLinks] = useState([
     {
       id: 0,
@@ -50,16 +47,12 @@ export const Profile = () => {
       return newState;
     });
   };
-
+  const avatar = useSelector((state) => state.skate.profile.avatar);
   return (
     <>
       <div className="profile anim">
         <div className="profile-avatar ">
-          <img
-            src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg"
-            alt
-            className="profile-img"
-          />
+          <img src={avatar} alt className="profile-img" />
           <div className="profile-name">Quan Ha</div>
         </div>
         <img
@@ -71,6 +64,7 @@ export const Profile = () => {
           {links.map((link) =>
             link.isOpen ? (
               <div
+                key={link.id}
                 className="profile-menu-link active"
                 onClick={() => {
                   handleLnkClick(link.id);
@@ -80,6 +74,7 @@ export const Profile = () => {
               </div>
             ) : (
               <div
+                key={link.id}
                 className="profile-menu-link"
                 onClick={() => {
                   handleLnkClick(link.id);
