@@ -42,7 +42,7 @@ export const Status = () => {
   const name = useSelector((state) => state.skate.profile.name);
   const avatar = useSelector((state) => state.skate.profile.avatar);
   return (
-    <div className="status box">
+    <div className="status anim box" style={{"--delay": `0.25s`}}>
       <div className="status-menu">
         {links.map((link) =>
           link.isOpen ? (

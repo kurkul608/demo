@@ -2,7 +2,7 @@ import React from "react";
 
 export const Event = () => {
   return (
-    <div className="event box">
+    <div className="event anim box" style={{"--delay": `0.3s`}}>
       <div className="event-wrapper">
         <img
           src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"

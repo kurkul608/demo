@@ -166,11 +166,11 @@ $button: #8f98a9;
 
 
 .profile {
- position: relative;
- height: 40vh;
- min-height: 250px;
- max-height: 350px;
- z-index: 1;
+    position: relative;
+    height: 40vh;
+    min-height: 250px;
+    max-height: 250px;
+    z-index: 1;
 
  &-cover {
   position: absolute;

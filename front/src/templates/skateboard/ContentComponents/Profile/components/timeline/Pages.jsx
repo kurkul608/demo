@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 export const Pages = () => {
   const users = useSelector((state) => state.skate.profile.friends);
   return (
-    <div className="pages box">
+    <div className="pages anim box" style={{"--delay": `0.6s`}}>
       <div className="intro-title">
         Your pages
         <button className="intro-menu" />

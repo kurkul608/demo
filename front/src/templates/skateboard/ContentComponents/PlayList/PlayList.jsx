@@ -8,6 +8,7 @@ import { skateReducer as skate } from "../../../../redux/reducers";
 
 export const PlayList = () => {
   const tracks = useSelector((state) => state.skate.tracks);
+  let animNumber = 0
   return (
     <div id="MusicList">
       <div id="player_track" className="">
@@ -90,7 +91,8 @@ export const PlayList = () => {
 
       <ul id="plList">
         {tracks.map((CurrentValue) => {
-          return <Listmusic data={CurrentValue} />;
+          animNumber > 5 ? animNumber = 0: animNumber += 0.1
+          return <Listmusic data={CurrentValue}  animNUm ={animNumber} />;
         })}
       </ul>
     </div>
