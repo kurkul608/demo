@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 //other
 import "./Profile.scss";
-import { Timeline } from "./components";
+import { Album, Pages, Timeline, Event } from "./components";
 import { useSelector } from "react-redux";
 
 export const Profile = () => {
@@ -11,27 +11,32 @@ export const Profile = () => {
       id: 0,
       name: "Timeline",
       isOpen: true,
+      component: <Timeline />
     },
     {
       id: 1,
-      name: "About",
+      name: "Album",
       isOpen: false,
+      component: <Event />
     },
     {
       id: 2,
       name: "Friends",
       isOpen: false,
+      component: <Pages />
     },
     {
       id: 3,
-      name: "Photos",
+      name: "Story",
       isOpen: false,
+      component: <Album />
     },
-    {
-      id: 4,
-      name: "More",
-      isOpen: false,
-    },
+    // {
+    //   id: 4,
+    //   name: "More",
+    //   isOpen: false,
+    //   component: <Pages />
+    // },
   ]);
 
   const handleLnkClick = (id) => {
@@ -47,6 +52,11 @@ export const Profile = () => {
       return newState;
     });
   };
+
+
+
+
+  
   const avatar = useSelector((state) => state.skate.profile.avatar);
   return (
     <>
@@ -86,7 +96,13 @@ export const Profile = () => {
           )}
         </div>
       </div>
-      {links.find((link) => link.id === 0).isOpen ? <Timeline /> : null}
+
+
+      {
+        links.filter((link) => link.isOpen? link.component : null)[0].component
+      }
+
+
     </>
   );
 };

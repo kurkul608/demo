@@ -15,7 +15,7 @@ export const Introduction = () => {
   );
   const name = useSelector((state) => state.skate.profile.name);
   return (
-    <div className="intro box">
+    <div className="intro anim box" style={{"--delay": `0.1s`}}>
       <div className="intro-title">
         Introduction
         <button className="intro-menu" />

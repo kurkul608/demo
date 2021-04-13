@@ -14,7 +14,7 @@ class BookmarkLists extends React.Component {
           state: {},
         }}
       >
-        <div className="video anim">
+        <div className="video anim" style={{"--delay": this.props.anim+`s`}}>
           <div className="video-time">{this.props.lists.timeMach} min</div>
           <div className="video-wrapper">
             <video muted>

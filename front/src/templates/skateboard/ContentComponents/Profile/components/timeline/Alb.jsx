@@ -11,7 +11,8 @@ export const Album = () => {
     (state) => state.skate.profile.album
   );
   return (
-    <div className="album box">
+    <div className="album anim box" style={{"--delay": `0.5s`}}>
+     
       <div className="status-main">
         <img
           src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg"
@@ -52,6 +53,7 @@ export const Album = () => {
           </div>
         </div>
       </div>
+   
       <div className="album-actions">
         <div className="album-action" style={{ cursor: "pointer" }}>
           <Like />

@@ -5,7 +5,7 @@ import { Introduction, Event, Pages, Status, Album } from "./index";
 
 export const Timeline = () => {
   return (
-    <div className="timeline anim">
+    <div className="timeline">
       <div className="timeline-left">
         <Introduction />
         <Event />

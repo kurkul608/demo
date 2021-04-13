@@ -1,12 +1,14 @@
 
 import React from "react";
 import { useSelector } from "react-redux";
-import MostWatched from "./MostWatched";
+import {MostWatched} from "./MostWatched";
 
 
  const HomeComponent = () => {
   const channelLists = useSelector((state) => state.skate.channelLists);
   const videosDesctopList = useSelector((state) => state.skate.lists);
+
+  let animNum = 0
   return (
     <>
             <div className="main-header anim">Discover</div>
@@ -57,7 +59,8 @@ import MostWatched from "./MostWatched";
             <div className="small-header anim" >Most Watched</div>
             <div className="videos">
               {videosDesctopList.map((CurrentValue) => {
-                return <MostWatched lists={CurrentValue} key={CurrentValue.id} />;
+                animNum +=0.18
+                return <MostWatched anim={animNum} lists={CurrentValue} key={CurrentValue.id} />;
               })}
             </div>
         </>
